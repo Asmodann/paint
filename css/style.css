@@ -1,0 +1,108 @@
+html, body
+{
+  margin: 0;
+  padding: 0;
+  background-color: #CCC;
+}
+
+._window
+{
+  position: absolute;
+  z-index: 3;
+  margin: 0 auto;
+  width: 400px;
+  top: 40%;
+  left: 40%;
+}
+
+.canvas-inner
+{
+  text-align: center;
+}
+
+.my-canvas
+{
+  background-color: #FFF;
+}
+
+.panel
+{
+  padding: 5px;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.tools
+{
+  border: 1px solid #000;
+  width: 250px;
+  height: 40em;
+  float: left;
+  background-color: #FFF;
+}
+
+.tools button,
+.tools .color
+{
+  padding: 0px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.tools button
+{
+  margin: 5px;
+  padding: 5px;
+  width: 110px;
+  border: 1px solid #000;
+}
+
+.tools button:hover
+{
+  background-color: rgba(0,0,0,0.2);
+}
+
+button.selected,
+button.selected:hover
+{
+  background-color: rgba(0,255,0,0.2);
+}
+
+.tool-size,
+.tool-type
+{
+  width: 100%;
+  margin: 10px;
+}
+
+.tool-size input,
+.tool-type select
+{
+  padding: 10px;
+  display: block;
+}
+
+.color
+{
+  width: 100px;
+  height: 100px;
+  display: block;
+  margin: 0 auto;
+}
+
+._window .close
+{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  padding: 5px;
+}
+
+._window
+{
+  border: 2px solid black;
+  background-color: #CCC;
+  padding: 20px;
+}

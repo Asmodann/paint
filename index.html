@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <title>My Paint</title>
+</head>
+<body>
+  <div class="panel">
+    <button id="new">New</button>
+    <button id="save">Save</button>
+    <button id="load">Load</button>
+    <button id="undo">Undo</button>
+  </div>
+  <div class="tools">
+    <input type="color" id="color" class="color" />
+    <button data-name="pen" class="btn-shape">Pen</button>
+    <button data-name="eraser" class="btn-shape">Eraser</button>
+    <button data-name="line" class="btn-shape">Line</button>
+    <button data-name="rect" class="btn-shape selected">Rect</button>
+    <button data-name="circle" class="btn-shape">Cicle</button>
+
+    <div class="tool-content">
+      <div class="tool-type">
+        <label for="type">Type</label>
+        <select id="type">
+          <option value='0'>Fill</option>
+          <option value='1'>Stroke</option>
+        </select>
+      </div>
+      <div class="tool-size">
+        <label for="size">Size of <b id="select_name"></b></label>
+        <input id="size" value="" type="number" min="1" max="30" />
+      </div>
+    </div>
+  </div>
+  <div class="canvas-inner">
+    <canvas id="my_canvas" class="my-canvas">Canvas is not supported by your browser!</canvas>
+  </div>
+
+  <div class="content-load-file _window" id="content_load_file" style="display: none;">
+    <button class="close">X</button>
+    <form id="load_form" name="load_form" enctype="multi-part/form-data">
+      <input type="file" name="file_image" /><br />
+      <button type="submit">Load</button>
+    </form>
+  </div>
+  <div class="content-register-file _window" id="content_register_file" style="display: none;">
+    <button class="close">X</button>
+    <form id="save_form" name="save_form" enctype="multi-part/form-data">
+      File name: <input type="text" name="file_name" /><br />
+      <button type="submit">Save</button>
+    </form>
+  </div>
+  <div class="content-new _window" id="content_new" style="display: none;">
+    <button class="close">X</button>
+    <form id="new_form" name="new_form">
+      Width: <input type="number" name="new_width" /><br />
+      Height: <input type="number" name="new_height" /><br />
+      <button type="submit">Generate</button>
+    </form>
+  </div>
+
+  <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript" src="js/src/Canvas.js"></script>
+  <script type="text/javascript" src="js/src/Draw.js"></script>
+  <script type="text/javascript" src="js/src/Pen.js"></script>
+  <script type="text/javascript" src="js/src/Line.js"></script>
+  <script type="text/javascript" src="js/src/Rect.js"></script>
+  <script type="text/javascript" src="js/src/Eraser.js"></script>
+  <script type="text/javascript" src="js/src/Circle.js"></script>
+</body>
+</html>
